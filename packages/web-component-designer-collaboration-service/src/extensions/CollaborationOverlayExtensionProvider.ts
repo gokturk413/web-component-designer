@@ -1,5 +1,5 @@
 import { css } from '@node-projects/base-custom-webcomponent';
-import { IDesignerExtensionProvider, IExtensionManager, IDesignerCanvas, IDesignItem, IDesignerExtension } from '@node-projects/web-component-designer';
+import { IDesignerExtensionProvider, IExtensionManager, IDesignerCanvas, IDesignItem, IDesignerExtension } from '@gokturk413/web-component-designer';
 import { CollaborationOverlayExtension } from './CollaborationOverlayExtension.js';
 
 export class CollaborationOverlayExtensionProvider implements IDesignerExtensionProvider {

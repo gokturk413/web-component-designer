@@ -2,7 +2,7 @@
 //binding:display="{'signal':'aa',..."
 //binding:value="aa" -> simplified form when only binding a direct property
 
-import type { BindingTarget } from "@node-projects/web-component-designer";
+import type { BindingTarget } from "@gokturk413/web-component-designer";
 
 export interface VisualizationBinding {
     interval?: number; //if triggered by interval

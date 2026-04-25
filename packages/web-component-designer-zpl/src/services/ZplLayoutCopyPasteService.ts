@@ -1,4 +1,4 @@
-import { ICopyPasteService, IDesignItem, InstanceServiceContainer, ServiceContainer, IRect, getTextFromClipboard, copyTextToClipboard, DefaultHtmlParserService } from '@node-projects/web-component-designer';
+import { ICopyPasteService, IDesignItem, InstanceServiceContainer, ServiceContainer, IRect, getTextFromClipboard, copyTextToClipboard, DefaultHtmlParserService } from '@gokturk413/web-component-designer';
 
 export class ZplLayoutCopyPasteService implements ICopyPasteService {
     constructor() {

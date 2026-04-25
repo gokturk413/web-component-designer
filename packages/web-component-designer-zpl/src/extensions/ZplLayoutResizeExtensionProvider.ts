@@ -1,4 +1,4 @@
-import { IExtensionManager, IDesignerCanvas, IDesignItem, ResizeExtensionProvider } from '@node-projects/web-component-designer';
+import { IExtensionManager, IDesignerCanvas, IDesignItem, ResizeExtensionProvider } from '@gokturk413/web-component-designer';
 import { ZplImage } from '../widgets/zpl-image.js';
 import { ZplBarcode } from '../widgets/zpl-barcode.js';
 import { ZplText } from '../widgets/zpl-text.js';

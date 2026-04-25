@@ -1,6 +1,6 @@
 import { css } from '@node-projects/base-custom-webcomponent';
 import { CollaborationCursorOverlayExtension } from './CollaborationCursorOverlayExtension.js';
-import { IDesignerExtensionProvider, IExtensionManager, IDesignerCanvas, IDesignItem, IDesignerExtension } from '@node-projects/web-component-designer';
+import { IDesignerExtensionProvider, IExtensionManager, IDesignerCanvas, IDesignItem, IDesignerExtension } from '@gokturk413/web-component-designer';
 
 export class CollaborationCursorOverlayExtensionProvider implements IDesignerExtensionProvider {
   shouldExtend(extensionManager: IExtensionManager, designerView: IDesignerCanvas, designItem: IDesignItem): boolean {

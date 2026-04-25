@@ -1,4 +1,4 @@
-import { IHtmlParserService, ServiceContainer, InstanceServiceContainer, IDesignItem, newElementFromString, DesignItem, CssAttributeParser } from "@node-projects/web-component-designer";
+import { IHtmlParserService, ServiceContainer, InstanceServiceContainer, IDesignItem, newElementFromString, DesignItem, CssAttributeParser } from "@gokturk413/web-component-designer";
 import * as parser from "@node-projects/node-html-parser-esm";
 // Alternative Parser, cause when you use the Browser, it instanciates the CusomElements, 
 // and some Elements remove attributes from their DOM, so you loose Data

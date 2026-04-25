@@ -1,4 +1,4 @@
-import { IProperty, IDesignItem, IPropertyGridDragDropService } from "@node-projects/web-component-designer";
+import { IProperty, IDesignItem, IPropertyGridDragDropService } from "@gokturk413/web-component-designer";
 
 export class PropertyGridDragDropService implements IPropertyGridDragDropService {
 

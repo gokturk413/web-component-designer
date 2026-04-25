@@ -1,5 +1,5 @@
 import { BaseCustomWebComponentConstructorAppend, Disposable, css, html } from "@node-projects/base-custom-webcomponent"
-import { ContextMenu, copyTextToClipboard, getTextFromClipboard, IContextMenuItem, IDesignItem, IEvent, InstanceServiceContainer, PropertiesHelper } from "@node-projects/web-component-designer";
+import { ContextMenu, copyTextToClipboard, getTextFromClipboard, IContextMenuItem, IDesignItem, IEvent, InstanceServiceContainer, PropertiesHelper } from "@gokturk413/web-component-designer";
 import { ParameterEditor } from "./ParameterEditor.js";
 import { VisualizationShell } from "../interfaces/VisualizationShell.js";
 import { VisualizationHandler } from "../interfaces/VisualizationHandler.js";

@@ -1,4 +1,4 @@
-import { ICollaborationDocumentSnapshot, ICollaborationRemoteChange, ICollaborationComment, ICollaborationTransport, ICollaborationService, ICollaborationSession } from "@node-projects/web-component-designer";
+import { ICollaborationDocumentSnapshot, ICollaborationRemoteChange, ICollaborationComment, ICollaborationTransport, ICollaborationService, ICollaborationSession } from "@gokturk413/web-component-designer";
 
 export type WebRtcTabCollaborationSignalingChannelKind = 'broadcast-channel' | 'manual';
 

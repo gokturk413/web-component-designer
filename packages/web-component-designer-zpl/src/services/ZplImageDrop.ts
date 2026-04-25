@@ -1,4 +1,4 @@
-import { DesignItem, IDesignerCanvas, IExternalDragDropService, InsertAction } from "@node-projects/web-component-designer";
+import { DesignItem, IDesignerCanvas, IExternalDragDropService, InsertAction } from "@gokturk413/web-component-designer";
 import { ZplImage } from "../widgets/zpl-image.js";
 
 export class ZplImageDrop implements IExternalDragDropService {

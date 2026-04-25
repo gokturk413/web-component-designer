@@ -1,4 +1,4 @@
-import { IBindableObjectsBrowser } from "@node-projects/web-component-designer";
+import { IBindableObjectsBrowser } from "@gokturk413/web-component-designer";
 
 export interface VisualizationShell {
   openConfirmation(element: HTMLElement, options:

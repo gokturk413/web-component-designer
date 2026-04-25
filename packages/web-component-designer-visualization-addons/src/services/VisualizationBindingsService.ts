@@ -1,4 +1,4 @@
-import { BindingMode, BindingTarget, IBinding, IBindingService, IDesignItem, PropertiesHelper } from "@node-projects/web-component-designer";
+import { BindingMode, BindingTarget, IBinding, IBindingService, IDesignItem, PropertiesHelper } from "@gokturk413/web-component-designer";
 import { VisualizationBinding } from "../interfaces/VisualizationBinding.js";
 import { BindingsHelper } from "../helpers/BindingsHelper.js";
 

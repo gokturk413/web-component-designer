@@ -1,5 +1,5 @@
 import { css, html, BaseCustomWebComponentConstructorAppend, Disposable, cssFromString } from '@node-projects/base-custom-webcomponent';
-import { NodeType, ITreeView, InstanceServiceContainer, IDesignItem, assetsPath, IContextMenuItem, ContextMenu, switchContainer, ISelectionChangedEvent, DomConverter, ForceCssContextMenu, hasCommandKey } from '@node-projects/web-component-designer';
+import { NodeType, ITreeView, InstanceServiceContainer, IDesignItem, assetsPath, IContextMenuItem, ContextMenu, switchContainer, ISelectionChangedEvent, DomConverter, ForceCssContextMenu, hasCommandKey } from '@gokturk413/web-component-designer';
 import { Wunderbaum } from 'wunderbaum';
 import { defaultOptions, defaultStyle } from '../WunderbaumOptions.js'
 //@ts-ignore

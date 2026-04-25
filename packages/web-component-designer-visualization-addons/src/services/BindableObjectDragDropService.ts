@@ -1,4 +1,4 @@
-import { OverlayLayer, DesignItem, IBindableObject, IBindableObjectDragDropService, IDesignerCanvas, InsertAction, ChangeGroup, BindingTarget, IProperty, IDesignItem, PropertyType } from "@node-projects/web-component-designer";
+import { OverlayLayer, DesignItem, IBindableObject, IBindableObjectDragDropService, IDesignerCanvas, InsertAction, ChangeGroup, BindingTarget, IProperty, IDesignItem, PropertyType } from "@gokturk413/web-component-designer";
 import { BindingsHelper } from "../helpers/BindingsHelper.js";
 import { VisualizationHandler } from "../interfaces/VisualizationHandler.js";
 import { VisualizationBinding } from "../interfaces/VisualizationBinding.js";

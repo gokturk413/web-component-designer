@@ -1,4 +1,4 @@
-import { deepValue, setDeepValue, sleep } from "@node-projects/web-component-designer/dist/elements/helper/Helper.js";
+import { deepValue, setDeepValue, sleep } from "@gokturk413/web-component-designer/dist/elements/helper/Helper.js";
 import { generateEventCodeFromBlockly } from "../blockly/BlocklyJavascriptHelper.js";
 import { parseBindingString } from "../helpers/BindingsHelper.js";
 import { IScriptMultiplexValue } from "../interfaces/IScriptMultiplexValue.js";

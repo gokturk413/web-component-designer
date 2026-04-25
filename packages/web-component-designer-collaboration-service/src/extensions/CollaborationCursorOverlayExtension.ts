@@ -1,4 +1,4 @@
-import { AbstractExtension, IExtensionManager, IDesignerCanvas, IDesignItem, ICollaborationPeerPresence, OverlayLayer } from "@node-projects/web-component-designer";
+import { AbstractExtension, IExtensionManager, IDesignerCanvas, IDesignItem, ICollaborationPeerPresence, OverlayLayer } from "@gokturk413/web-component-designer";
 
 function truncateText(text: string, maxLength: number) {
   if (!text || text.length <= maxLength)

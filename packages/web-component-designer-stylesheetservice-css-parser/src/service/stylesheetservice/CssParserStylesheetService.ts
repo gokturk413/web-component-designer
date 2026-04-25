@@ -1,6 +1,6 @@
 import { CssAtRuleAST, CssDeclarationAST, CssRuleAST, CssStylesheetAST, CssWhitespaceAST, parse, stringify } from "@node-projects/css-parser";
-import { AbstractStylesheetService, IDocumentStylesheet, IStyleRule, IStylesheet, IStyleDeclaration, IDesignerCanvas, IDesignItem } from "@node-projects/web-component-designer";
-import { Specificity } from "@node-projects/web-component-designer";
+import { AbstractStylesheetService, IDocumentStylesheet, IStyleRule, IStylesheet, IStyleDeclaration, IDesignerCanvas, IDesignItem } from "@gokturk413/web-component-designer";
+import { Specificity } from "@gokturk413/web-component-designer";
 
 interface IRuleWithAST extends IStyleRule {
     ast: CssRuleAST,

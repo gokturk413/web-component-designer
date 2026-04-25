@@ -1,4 +1,4 @@
-import { BindingTarget, IDesignItem, IRefactorService, IRefactoring } from "@node-projects/web-component-designer";
+import { BindingTarget, IDesignItem, IRefactorService, IRefactoring } from "@gokturk413/web-component-designer";
 import { Script } from "../scripting/Script.js";
 import { IScriptMultiplexValue } from "../interfaces/IScriptMultiplexValue.js";
 

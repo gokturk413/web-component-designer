@@ -1,4 +1,4 @@
-import { ContextmenuInitiator, getCollaborationNodeIndex, ICollaborationComment, ICollaborationService, IContextMenuExtension, IContextMenuItem, IDesignerCanvas, IDesignItem } from '@node-projects/web-component-designer';
+import { ContextmenuInitiator, getCollaborationNodeIndex, ICollaborationComment, ICollaborationService, IContextMenuExtension, IContextMenuItem, IDesignerCanvas, IDesignItem } from '@gokturk413/web-component-designer';
 
 function truncateText(text: string, maxLength: number) {
   if (!text || text.length <= maxLength)

@@ -2,8 +2,8 @@ import { IProperty, PropertyGrid } from '@node-projects/propertygrid.webcomponen
 import { WbRenderEventType } from "types";
 import { VisualizationHandler } from '../interfaces/VisualizationHandler';
 import { VisualizationShell } from '../interfaces/VisualizationShell';
-import { CodeViewMonaco } from '@node-projects/web-component-designer-codeview-monaco';
-import { BindableObjectsTarget, IBindableObject, InstanceServiceContainer, ServiceContainer } from '@node-projects/web-component-designer';
+import { CodeViewMonaco } from '@gokturk413/web-component-designer-codeview-monaco';
+import { BindableObjectsTarget, IBindableObject, InstanceServiceContainer, ServiceContainer } from '@gokturk413/web-component-designer';
 
 export class VisualizationPropertyGrid extends PropertyGrid {
     public serviceContainer: ServiceContainer;

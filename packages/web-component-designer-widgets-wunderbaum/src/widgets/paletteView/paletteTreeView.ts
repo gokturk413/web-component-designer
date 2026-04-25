@@ -1,5 +1,5 @@
 import { css, html, BaseCustomWebComponentConstructorAppend, cssFromString } from '@node-projects/base-custom-webcomponent';
-import { IElementDefinition, IElementsService, NamedTools, ServiceContainer, dragDropFormatNameElementDefinition } from '@node-projects/web-component-designer';
+import { IElementDefinition, IElementsService, NamedTools, ServiceContainer, dragDropFormatNameElementDefinition } from '@gokturk413/web-component-designer';
 import { Wunderbaum } from 'wunderbaum';
 import { defaultOptions, defaultStyle } from '../WunderbaumOptions.js';
 //@ts-ignore

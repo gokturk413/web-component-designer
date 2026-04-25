@@ -1,4 +1,4 @@
-import { ExtensionType, IDesignerCanvas, SeperatorContextMenu, ServiceContainer } from "@node-projects/web-component-designer";
+import { ExtensionType, IDesignerCanvas, SeperatorContextMenu, ServiceContainer } from "@gokturk413/web-component-designer";
 import { CollaborationCommentsContextMenu } from "./extensions/CollaborationCommentsContextMenu.js";
 import { CollaborationOverlayExtensionProvider } from "./extensions/CollaborationOverlayExtensionProvider.js";
 import { CollaborationCursorOverlayExtensionProvider } from "./extensions/CollaborationCursorOverlayExtensionProvider.js";

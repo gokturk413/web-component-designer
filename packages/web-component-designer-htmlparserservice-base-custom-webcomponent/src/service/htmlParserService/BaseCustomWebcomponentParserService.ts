@@ -1,4 +1,4 @@
-import { IHtmlParserService, ServiceContainer, InstanceServiceContainer, IDesignItem } from '@node-projects/web-component-designer';
+import { IHtmlParserService, ServiceContainer, InstanceServiceContainer, IDesignItem } from '@gokturk413/web-component-designer';
 import type { SourceFile } from 'typescript'
 
 function* findAllNodesOfKind(node: ts.Node, kind: ts.SyntaxKind) {

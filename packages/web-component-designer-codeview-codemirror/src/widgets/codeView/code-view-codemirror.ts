@@ -1,6 +1,6 @@
 /*
 import { BaseCustomWebComponentLazyAppend, css, html, TypedEvent } from '@node-projects/base-custom-webcomponent';
-import { ICodeView, IDisposable, IUiCommand, CommandType, IStringPosition } from '@node-projects/web-component-designer';
+import { ICodeView, IDisposable, IUiCommand, CommandType, IStringPosition } from '@gokturk413/web-component-designer';
 import CodeMirror from 'codemirror';
 
 export class CodeViewCodeMirror extends BaseCustomWebComponentLazyAppend implements ICodeView, IDisposable {

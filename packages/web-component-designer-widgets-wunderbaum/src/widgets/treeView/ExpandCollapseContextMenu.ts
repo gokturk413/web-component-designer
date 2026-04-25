@@ -1,4 +1,4 @@
-import { ContextmenuInitiator, IContextMenuExtension, IContextMenuItem, IDesignItem, IDesignerCanvas } from "@node-projects/web-component-designer";
+import { ContextmenuInitiator, IContextMenuExtension, IContextMenuItem, IDesignItem, IDesignerCanvas } from "@gokturk413/web-component-designer";
 import { TreeViewExtended } from "./treeViewExtended.js";
 import { assetsPath } from "../../Constants.js";
 

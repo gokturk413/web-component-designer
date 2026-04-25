@@ -1,4 +1,4 @@
-import { ICollaborationPeerPresence, ICollaborationComment, IDesignItem, AbstractExtension, IExtensionManager, IDesignerCanvas, getCollaborationNodeIndex, OverlayLayer } from "@node-projects/web-component-designer";
+import { ICollaborationPeerPresence, ICollaborationComment, IDesignItem, AbstractExtension, IExtensionManager, IDesignerCanvas, getCollaborationNodeIndex, OverlayLayer } from "@gokturk413/web-component-designer";
 
 const collaborationOverlayCacheKey = Symbol('collaborationOverlayCache');
 

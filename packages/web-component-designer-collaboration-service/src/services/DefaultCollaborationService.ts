@@ -1,5 +1,5 @@
 import { TypedEvent } from '@node-projects/base-custom-webcomponent';
-import { CollaborationConnectionState, DomConverter, getCollaborationNodeIndex, getCollaborationNodeIndexes, getDesignItemByCollaborationNodeIndex, ICollaborationComment, ICollaborationCommentsChangedEvent, ICollaborationDocumentSnapshot, ICollaborationPeerPresence, ICollaborationPeersChangedEvent, ICollaborationRemoteChange, ICollaborationSelectionEvent, ICollaborationService, ICollaborationSession, ICollaborationStateChangedEvent, ICollaborationTransport, IDesignerCanvas, ITransactionItem, IUndoChangeEvent, UndoChangeSource } from '@node-projects/web-component-designer';
+import { CollaborationConnectionState, DomConverter, getCollaborationNodeIndex, getCollaborationNodeIndexes, getDesignItemByCollaborationNodeIndex, ICollaborationComment, ICollaborationCommentsChangedEvent, ICollaborationDocumentSnapshot, ICollaborationPeerPresence, ICollaborationPeersChangedEvent, ICollaborationRemoteChange, ICollaborationSelectionEvent, ICollaborationService, ICollaborationSession, ICollaborationStateChangedEvent, ICollaborationTransport, IDesignerCanvas, ITransactionItem, IUndoChangeEvent, UndoChangeSource } from '@gokturk413/web-component-designer';
 
 function createPeerColor(peerId: string) {
   let hash = 0;

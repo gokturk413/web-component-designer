@@ -1,4 +1,4 @@
-import { DefaultPlacementService, IDesignItem, IDesignerCanvas, IPoint, filterChildPlaceItems } from '@node-projects/web-component-designer';
+import { DefaultPlacementService, IDesignItem, IDesignerCanvas, IPoint, filterChildPlaceItems } from '@gokturk413/web-component-designer';
 
 export class ZplLayoutPlacementService extends DefaultPlacementService {
 

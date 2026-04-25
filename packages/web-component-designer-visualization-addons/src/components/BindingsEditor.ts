@@ -1,6 +1,6 @@
 import { BaseCustomWebComponentConstructorAppend, html, css } from '@node-projects/base-custom-webcomponent';
-import { BindingMode, BindingTarget, IBinding, InstanceServiceContainer, IProperty, ServiceContainer } from '@node-projects/web-component-designer';
-import { CodeViewMonaco } from '@node-projects/web-component-designer-codeview-monaco';
+import { BindingMode, BindingTarget, IBinding, InstanceServiceContainer, IProperty, ServiceContainer } from '@gokturk413/web-component-designer';
+import { CodeViewMonaco } from '@gokturk413/web-component-designer-codeview-monaco';
 import { VisualizationShell } from '../interfaces/VisualizationShell.js';
 import { BindingsEditorHistoric } from './BindingsEditorHistoric.js';
 import { VisualizationBinding } from '../interfaces/VisualizationBinding.js';

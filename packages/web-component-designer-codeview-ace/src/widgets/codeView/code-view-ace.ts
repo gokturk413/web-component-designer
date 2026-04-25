@@ -1,5 +1,5 @@
 import { BaseCustomWebComponentLazyAppend, css, TypedEvent } from '@node-projects/base-custom-webcomponent';
-import { ICodeView, IDisposable, IUiCommand, CommandType, IStringPosition } from '@node-projects/web-component-designer';
+import { ICodeView, IDisposable, IUiCommand, CommandType, IStringPosition } from '@gokturk413/web-component-designer';
 import type { Ace } from "ace-builds";
 
 class CodeViewAceCompleter {

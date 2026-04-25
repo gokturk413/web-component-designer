@@ -1,4 +1,4 @@
-import { DesignItem, ITextWriter, IDesignItem, IHtmlParserService, IHtmlWriterOptions, IHtmlWriterService, InstanceServiceContainer, ServiceContainer } from "@node-projects/web-component-designer";
+import { DesignItem, ITextWriter, IDesignItem, IHtmlParserService, IHtmlWriterOptions, IHtmlWriterService, InstanceServiceContainer, ServiceContainer } from "@gokturk413/web-component-designer";
 import { ZplBarcode } from "../widgets/zpl-barcode.js";
 import { ZplGraphicBox } from "../widgets/zpl-graphic-box.js";
 import { ZplGraphicDiagonalLine } from "../widgets/zpl-graphic-diagonal-line.js";

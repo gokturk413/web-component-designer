@@ -1,4 +1,4 @@
-import { BasePropertyEditor, IProperty, ValueType } from "@node-projects/web-component-designer";
+import { BasePropertyEditor, IProperty, ValueType } from "@gokturk413/web-component-designer";
 import { VisualizationShell } from "../interfaces/VisualizationShell.js";
 
 export class SignalPropertyEditor extends BasePropertyEditor<HTMLElement> {

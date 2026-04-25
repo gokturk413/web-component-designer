@@ -1,5 +1,5 @@
 import { BaseCustomWebComponentLazyAppend, css, cssFromString, html, TypedEvent } from '@node-projects/base-custom-webcomponent';
-import { CommandType, IActivateable, ICodeView, InstanceServiceContainer, IStringPosition, IUiCommand, IUiCommandHandler } from '@node-projects/web-component-designer';
+import { CommandType, IActivateable, ICodeView, InstanceServiceContainer, IStringPosition, IUiCommand, IUiCommandHandler } from '@gokturk413/web-component-designer';
 import type * as monacoType from 'monaco-editor'
 
 export class CodeViewMonaco extends BaseCustomWebComponentLazyAppend implements ICodeView, IActivateable, IUiCommandHandler {

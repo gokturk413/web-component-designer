@@ -1,4 +1,4 @@
-import { IBinding, IDesignItem, IRefactoring, IRefactorService } from "@node-projects/web-component-designer";
+import { IBinding, IDesignItem, IRefactoring, IRefactorService } from "@gokturk413/web-component-designer";
 
 
 export class VisualizationBindingsRefactorService implements IRefactorService {

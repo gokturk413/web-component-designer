@@ -1,9 +1,9 @@
 import { BaseCustomWebComponentConstructorAppend, css, html } from "@node-projects/base-custom-webcomponent";
 import { Script } from "../scripting/Script.js";
 import { ScriptCommands } from "../scripting/ScriptCommands.js";
-import { ContextMenu, InstanceServiceContainer, ServiceContainer } from "@node-projects/web-component-designer";
+import { ContextMenu, InstanceServiceContainer, ServiceContainer } from "@gokturk413/web-component-designer";
 import { IProperty, typeInfoFromJsonSchema } from "@node-projects/propertygrid.webcomponent";
-import { defaultOptions } from "@node-projects/web-component-designer-widgets-wunderbaum";
+import { defaultOptions } from "@gokturk413/web-component-designer-widgets-wunderbaum";
 import { Wunderbaum } from 'wunderbaum';
 //@ts-ignore
 import wunderbaumStyle from 'wunderbaum/dist/wunderbaum.css' with { type: 'css' };

@@ -1,4 +1,4 @@
-import { CssAttributeParser, DesignItem, IDesignItem, IHtmlParserService, InstanceServiceContainer, ServiceContainer, newElementFromString } from "@node-projects/web-component-designer";
+import { CssAttributeParser, DesignItem, IDesignItem, IHtmlParserService, InstanceServiceContainer, ServiceContainer, newElementFromString } from "@gokturk413/web-component-designer";
 import { BlockStatement, ClassDeclaration, FunctionExpression, Identifier, MethodDefinition, ReturnStatement, TaggedTemplateExpression } from "esprima-next";
 import * as esprima from "esprima-next";
 

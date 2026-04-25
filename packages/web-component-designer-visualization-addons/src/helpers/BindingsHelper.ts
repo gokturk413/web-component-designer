@@ -1,8 +1,8 @@
 import { TypedEvent, cssFromString } from "@node-projects/base-custom-webcomponent";
 import { VisualizationBinding } from "../interfaces/VisualizationBinding.js";
 import { State, VisualizationHandler } from "../interfaces/VisualizationHandler.js";
-import { BindingTarget } from "@node-projects/web-component-designer/dist/elements/item/BindingTarget.js";
-import { PropertiesHelper } from "@node-projects/web-component-designer/dist/elements/services/propertiesService/services/PropertiesHelper.js";
+import { BindingTarget } from "@gokturk413/web-component-designer/dist/elements/item/BindingTarget.js";
+import { PropertiesHelper } from "@gokturk413/web-component-designer/dist/elements/services/propertiesService/services/PropertiesHelper.js";
 
 //;,[ are not allowed in bindings, so they could be used for a short form...
 
