@@ -19,10 +19,28 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm install --workspaces --legacy-peer-deps
+        run: npm install --legacy-peer-deps
 
-      - name: Build all packages
-        run: npm run build --workspaces --if-present
+      - name: Build in dependency order
+        run: |
+          # 1. Base package first (all others depend on this)
+          npm run build -w packages/web-component-designer
+
+          # 2. Packages that depend only on base
+          npm run build -w packages/web-component-designer-codeview-ace || true
+          npm run build -w packages/web-component-designer-codeview-codemirror || true
+          npm run build -w packages/web-component-designer-codeview-codemirror5 || true
+          npm run build -w packages/web-component-designer-codeview-monaco
+          npm run build -w packages/web-component-designer-collaboration-service || true
+          npm run build -w packages/web-component-designer-htmlparserservice-base-custom-webcomponent || true
+          npm run build -w packages/web-component-designer-htmlparserservice-lit-element || true
+          npm run build -w packages/web-component-designer-htmlparserservice-nodehtmlparser
+          npm run build -w packages/web-component-designer-stylesheetservice-css-parser || true
+          npm run build -w packages/web-component-designer-widgets-wunderbaum
+          npm run build -w packages/web-component-designer-zpl || true
+
+          # 3. Last: visualization-addons (depends on codeview-monaco + widgets-wunderbaum)
+          npm run build -w packages/web-component-designer-visualization-addons
 
       - name: Bundle all packages
         run: npm run bundle --workspaces --if-present
