@@ -1,6 +1,6 @@
 {
   "description": "web-component-designer addon: Parser Service using the Node HTML Parser",
-  "name": "@node-projects/web-component-designer-htmlparserservice-nodehtmlparser",
+  "name": "@gokturk413/web-component-designer-htmlparserservice-nodehtmlparser",
   "version": "0.1.12",
   "type": "module",
   "main": "./dist/service/htmlParserService/NodeHtmlParserService.js",
@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@node-projects/node-html-parser-esm": "^6.2.0",
-    "@node-projects/web-component-designer": ">=0.1.278"
+    "@gokturk413/web-component-designer": ">=0.1.278"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-projects/web-component-designer.git"
+    "url": "git+https://github.com/gokturk413/web-component-designer.git"
   }
 }

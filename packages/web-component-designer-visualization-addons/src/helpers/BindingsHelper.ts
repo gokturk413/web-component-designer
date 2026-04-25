@@ -65,6 +65,7 @@ class IndirectSignal {
   private unsubscribeTargetValue: [((id: string, value: any) => void), any];
   private cleanupCalls = [];
   private combinedName: string;
+  private _realCombinedName: string;
   private disposed: boolean;
   private valueChangedCb: (value: any) => void
   private visualizationHandler: VisualizationHandler;
@@ -175,12 +176,14 @@ class IndirectSignal {
       nm = this.visualizationHandler.getNormalizedSignalName(nm, this.relativeSignalPath, this.element);
     if (this.combinedName != nm) {
       if (this.unsubscribeTargetValue) {
-        this.visualizationHandler.unsubscribeState(this.combinedName, this.unsubscribeTargetValue[0], this.unsubscribeTargetValue[1]);
+        this.visualizationHandler.unsubscribeState(this._realCombinedName ?? this.combinedName, this.unsubscribeTargetValue[0], this.unsubscribeTargetValue[1]);
       }
       if (!this.disposed) {
         this.combinedName = nm;
+        // strip 'state:' prefix — real state ID needed for subscribeState
+        this._realCombinedName = nm.startsWith('state:') ? nm.substring(6) : nm;
         let cb = (id: string, value: any) => this.valueChangedCb(value);
-        this.unsubscribeTargetValue = [cb, this.visualizationHandler.subscribeState(nm, cb)];
+        this.unsubscribeTargetValue = [cb, this.visualizationHandler.subscribeState(this._realCombinedName, cb)];
       }
     }
   }
@@ -188,7 +191,7 @@ class IndirectSignal {
   dispose() {
     this.disposed = true;
     if (this.unsubscribeTargetValue) {
-      this.visualizationHandler.unsubscribeState(this.combinedName, this.unsubscribeTargetValue[0], this.unsubscribeTargetValue[1]);
+      this.visualizationHandler.unsubscribeState(this._realCombinedName ?? this.combinedName, this.unsubscribeTargetValue[0], this.unsubscribeTargetValue[1]);
       this.unsubscribeTargetValue = null;
     }
     for (let i = 0; i < this.signals.length; i++) {
@@ -810,7 +813,12 @@ export class BindingsHelper {
         });
       } else {
         if (s.includes('{')) {
-          let indirectSignal = new IndirectSignal(this, this._visualizationHandler, s, (value) => this.handleValueChanged(element, root, binding, value.val, valuesObject, i, signalVars, false, relativeSignalPath), element, relativeSignalPath, root, specialValueHandler);
+          const _isFullState = s.startsWith('state:');
+          const _indirectId = _isFullState ? s.substring(6) : s;
+          const _indirectCb = _isFullState
+            ? (value: any) => this.handleValueChanged(element, root, binding, value, valuesObject, i, signalVars, true, relativeSignalPath)
+            : (value: any) => this.handleValueChanged(element, root, binding, value.val, valuesObject, i, signalVars, false, relativeSignalPath);
+          let indirectSignal = new IndirectSignal(this, this._visualizationHandler, _indirectId, _indirectCb, element, relativeSignalPath, root, specialValueHandler);
           if (!cleanupCalls)
             cleanupCalls = [];
           cleanupCalls.push(() => indirectSignal.dispose());
@@ -837,6 +845,25 @@ export class BindingsHelper {
               });
             } else
               this._visualizationHandler.getHistoricData(s, binding[1].historic).then(x => this.handleValueChanged(element, root, binding, x?.values, valuesObject, i, signalVars, true, relativeSignalPath))
+          } else if (s.startsWith('state:')) {
+            // Full state binding — triggers on val, q, ack, ts changes
+            // Expression usage: __0.val, __0.q, __0.ack, __0.ts etc.
+            const stateId = s.substring(6);
+            const cb = (id: string, value: State) => this.handleValueChanged(element, root, binding, value, valuesObject, i, signalVars, true, relativeSignalPath);
+            unsubscribeList.push([stateId, cb, this._visualizationHandler.subscribeState(stateId, cb)]);
+            this._visualizationHandler.getState(stateId).then(x => this.handleValueChanged(element, root, binding, x ?? null, valuesObject, i, signalVars, true, relativeSignalPath));
+          } else if (s.startsWith('object:')) {
+            // Full ioBroker object binding — reads common, native, type etc.
+            // Expression usage: __0.common.name, __0.native.nodeId etc.
+            const objectId = s.substring(7);
+            this._visualizationHandler.getObject(objectId).then(x => this.handleValueChanged(element, root, binding, x ?? null, valuesObject, i, signalVars, true, relativeSignalPath));
+            if ((this._visualizationHandler as any).subscribeObject) {
+              const cb = (id: string, obj: any) => this.handleValueChanged(element, root, binding, obj, valuesObject, i, signalVars, true, relativeSignalPath);
+              const subscr = (this._visualizationHandler as any).subscribeObject(objectId, cb);
+              if (!cleanupCalls)
+                cleanupCalls = [];
+              cleanupCalls.push(() => (this._visualizationHandler as any).unsubscribeObject?.(objectId, cb, subscr));
+            }
           } else {
             const cb = (id: string, value: State) => this.handleValueChanged(element, root, binding, value.val, valuesObject, i, signalVars, false, relativeSignalPath);
             unsubscribeList.push([s, cb, this._visualizationHandler.subscribeState(s, cb)]);

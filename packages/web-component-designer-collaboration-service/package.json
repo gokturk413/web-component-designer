@@ -1,6 +1,6 @@
 {
   "description": "web-component-designer addon for collaboration features",
-  "name": "@node-projects/web-component-designer-collaboration-service",
+  "name": "@gokturk413/web-component-designer-collaboration-service",
   "version": "0.2.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,17 +11,17 @@
     "build": "tsc",
     "link": "npm link",
     "prepublishOnly": "npm run build && npm run bundle",
-    "bundle": "esbuild ./dist/index.js --format=esm --minify --external:@node-projects/* --platform=neutral --bundle --outfile=./dist/index-min.js"
+    "bundle": "esbuild ./dist/index.js --format=esm --minify --external:@gokturk413/* --external:@node-projects/* --platform=neutral --bundle --outfile=./dist/index-min.js"
   },
   "dependencies": {
     "@node-projects/base-custom-webcomponent": ">=0.27.8",
-    "@node-projects/web-component-designer": ">=0.2.0"
+    "@gokturk413/web-component-designer": ">=0.2.0"
   },
   "devDependencies": {
     "esbuild": "^0.25.10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-projects/web-component-designer.git"
+    "url": "git+https://github.com/gokturk413/web-component-designer.git"
   }
 }

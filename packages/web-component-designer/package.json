@@ -1,6 +1,6 @@
 {
   "description": "A WYSIWYG designer webcomponent for html components",
-  "name": "@node-projects/web-component-designer",
+  "name": "@gokturk413/web-component-designer",
   "version": "0.2.6",
   "type": "module",
   "main": "./dist/index.js",
@@ -26,6 +26,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-projects/web-component-designer.git"
+    "url": "git+https://github.com/gokturk413/web-component-designer.git"
   }
 }

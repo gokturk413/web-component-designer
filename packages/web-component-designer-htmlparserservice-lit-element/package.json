@@ -1,6 +1,6 @@
 {
   "description": "web-component-designer addon: Parser Service for Templates inside of BaseCustomWebcomponent",
-  "name": "@node-projects/web-component-designer-htmlparserservice-lit-element",
+  "name": "@gokturk413/web-component-designer-htmlparserservice-lit-element",
   "version": "0.1.4",
   "type": "module",
   "main": "./dist/service/htmlParserService/LitElementParserService.js",
@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "esprima-next": "^6.0.3",
-    "@node-projects/web-component-designer": ">=0.1.224"
+    "@gokturk413/web-component-designer": ">=0.1.224"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-projects/web-component-designer.git"
+    "url": "git+https://github.com/gokturk413/web-component-designer.git"
   }
 }
