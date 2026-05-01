@@ -679,10 +679,14 @@ export class BindingsHelper {
       let sng = signals[i];
       signalVars[i] = '__' + i;
       if (sng.includes(':')) {
-        const spl = sng.split(':');
-        signalVars[i] = spl[0];
-        sng = spl[1];
-        signals[i] = sng;
+        const colonIdx = sng.indexOf(':');
+        const prefix = sng.substring(0, colonIdx);
+        if (prefix !== 'state' && prefix !== 'object') {
+          signalVars[i] = prefix;
+          sng = sng.substring(colonIdx + 1);
+          signals[i] = sng;
+        }
+        // 'state:' and 'object:' are type keywords — keep full signal, keep __N var name
       }
       if (sng[0] === '?') { //access object path in property in custom control, todo: bind direct to property value in local property
         if (root) { //root is null when opened in designer, then do not apply property bindings
@@ -736,6 +740,7 @@ export class BindingsHelper {
     let valuesObject = new Array(signals.length);
     for (let i = 0; i < signals.length; i++) {
       const s = signals[i];
+      if (s == null) continue; // ?prop resolved to undefined — skip, re-apply fires when property changes
       if (s[0] === '?') {
         if (root) {
           const nm = s.substring(1);
